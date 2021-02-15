@@ -7,6 +7,17 @@
 
 ### Inputs/Outputs
  > It will be implemented in C++. We are interested in creating Savior because it allows room for creativity and the end product will be unique and fun to share with others. The input would be different choices that the user would want to make. The output would be text responses and indicators to represent the varied paths of the story and the possible actions of the character based on the decision of the user.
+ >
+ > Example: 
+ >  * *Conversation*
+ >     * Output: “Hello traveller, welcome, here is a book to assist you on your journey.”
+ >     * Input: a. “What is inside this book?” b. “Thanks, see ya.”
+ >  * *Action*
+ >    * Output: “A fairy has stolen your book!”
+ >    * Input: a. Chase fairy b. Let it get away c. Shoot it with arrow
+ >
+ > Each option resulting in a different resulting story line.
+
 
 ### Strategy Design Pattern
 > An important feature of our game is that characters have different attacks and each attack has a different algorithm associated with it. We anticipate that we will continuously have to override the attack method per character class in order to give each character a distinct attack. Additionally, in the case that an attack algorithm changes, the client (character class) will also have to change. In order to resolve this issue, we will implement the Strategy Pattern. The Strategy Pattern will allow us to separate the different algorithms for the attacks from the client (character classes). This will allow the corresponding algorithm to be called during runtime when the user selects an attack. 
