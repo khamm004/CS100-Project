@@ -25,18 +25,16 @@
 ### Abstract Factory Pattern
 > Another important feature of our game is the ability to mix and match characters with different weapons and armor. In trying to implement this feature, we face the challenge of reserving certain weapons and armor for a particular type of character. In order to resolve this issue, we will implement the Abstract Factory Pattern. This pattern will be used to help create new character instances with the user’s choice of weapon and armor. For example, if our game included some sort of soldier, then it would be very easy to be able to create a new instance of a character with properties like strength and carries armour. Additionally, it prevents characters from being matched with weapons and armor that do not make sense. 
 
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to 
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
- > * There is no requirement for automation in the project board but feel free to explore those options.
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
 ## Class Diagram
- > Include a class diagram(s) for each design pattern and a description of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
+  ### Abstract Factory Pattern Diagram 
+  >![Screenshot](AbstractFactoryOMT.png)
+  > ## Character Factory OMT Description:
+  > In our game, the different characters are distinguishable by their weapon, defense, and the token. For example, the Knight has a designated knight weapon (sword), a defense (shield), and token (silver). When the user wants to select a new character, if they select a Knight, the knight object will be used as the user’s character. If instead, the user decides to select the Fairy character, that will take the place of the user character.
+  ### Strategy Pattern Diagram
+  >![Screenshot](StrategyPatternOMT.png)
+  > ## Strategy Pattern OMT Diagram Description
+  > This game will utilize the strategy design pattern in order to implement the separate algorithms necessary for actions such as attacking as well as calculation of damage. Both of these methods are different for each character type so the strategy pattern enables them to be implemented independently but uniformly through a predefined interface (called Attack). The distinction between User and Enemy is made because the two types of characters impact the game differently, one is controlled by the user and the other will have predetermined reactions. 
+
  
  > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
