@@ -27,11 +27,11 @@
 
 ## Class Diagram
   ### Abstract Factory Pattern Diagram 
-  >![Screenshot](AbstractFactoryOMT.png)
+  >![Screenshot](OMT-AbstractFactory.jpg)
   > ## Character Factory OMT Description:
   > In our game, the different characters are distinguishable by their weapon, defense, and the token. For example, the Knight has a designated knight weapon (sword), a defense (shield), and token (silver). When the user wants to select a new character, if they select a Knight, the knight object will be used as the user’s character. If instead, the user decides to select the Fairy character, that will take the place of the user character.
   ### Strategy Pattern Diagram
-  >![Screenshot](StrategyPatternOMT.png)
+  >![Screenshot](OMT-Strategy.jpg)
   > ## Strategy Pattern OMT Diagram Description
   > This game will utilize the strategy design pattern in order to implement the separate algorithms necessary for actions such as attacking as well as calculation of damage. Both of these methods are different for each character type so the strategy pattern enables them to be implemented independently but uniformly through a predefined interface (called Attack). The distinction between User and Enemy is made because the two types of characters impact the game differently, one is controlled by the user and the other will have predetermined reactions. 
 
