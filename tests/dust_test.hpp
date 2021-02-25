@@ -2,8 +2,8 @@
 #define __DUST_TEST_HPP__
 
 #include "gtest/gtest.h"
-#include "defense.hpp"
-#include "dust.hpp"
+#include "../header/defense.hpp"
+#include "../header/dust.hpp"
 
 TEST(DustTests, DustDefaultConstructor) {
     Defense* dust = new Dust();

@@ -2,8 +2,8 @@
 #define __IRON_GAUNTLET_TEST_HPP__
 
 #include "gtest/gtest.h"
-#include "defense.hpp"
-#include "iron_gauntlet.hpp"
+#include "../header/defense.hpp"
+#include "../header/iron_gauntlet.hpp"
 
 TEST(IronGauntletTests, IronGauntletDefaultConstructor) {
     Defense* ig = new IronGauntlet();

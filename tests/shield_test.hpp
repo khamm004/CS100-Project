@@ -2,8 +2,8 @@
 #define __SHIELD_TEST_HPP__
 
 #include "gtest/gtest.h"
-#include "defense.hpp"
-#include "shield.hpp"
+#include "../header/defense.hpp"
+#include "../header/shield.hpp"
 #include <stdexcept>
 
 TEST(ShieldTests, ShieldDefaultConstructor) {

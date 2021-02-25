@@ -2,8 +2,8 @@
 #define __MAGIC_RUBY_TEST_HPP__
 
 #include "gtest/gtest.h"
-#include "defense.hpp"
-#include "magic_ruby.hpp"
+#include "../header/defense.hpp"
+#include "../header/magic_ruby.hpp"
 
 TEST(MagicRubyTests, MagicRubyDefaultConstructor) {
     Defense* ruby = new MagicRuby();
