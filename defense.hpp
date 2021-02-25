@@ -3,6 +3,7 @@
 
 #include <string>
 #include<iostream> 
+#include <stdexcept>
 
 class Defense{
     protected:
@@ -11,7 +12,13 @@ class Defense{
         Defense(){}
 
 	void setProtectionLevel(int lvl){
+		
 		protectionLevel = lvl;
+
+		if (lvl < 0) { 
+        		std::invalid_argument ia = std::invalid_argument(std::to_string(lvl));
+        		throw ia;
+    		}
 	}
 	
 	int getProtectionLevel(){
