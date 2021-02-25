@@ -5,9 +5,35 @@
 #include "defense.hpp"
 #include "dust.hpp"
 
-TEST(ConstructorTest, DustDefaultConstructor) {
+TEST(DustTests, DustDefaultConstructor) {
     Defense* dust = new Dust();
     EXPECT_EQ(dust->getProtectionLevel(), 15);
 }
 
+// set ProtectionLevel
+TEST(DustTests, PosDustPL) {
+    Defense* dust = new Dust();
+    dust->setProtectionLevel(22);
+    EXPECT_EQ(dust->getProtectionLevel(), 22);
+}
+
+TEST(DustTests, ZeroDustPL) {
+    Defense* dust = new Dust();
+    dust->setProtectionLevel(0);
+    EXPECT_EQ(dust->getProtectionLevel(), 0);
+}
+
+TEST(DustTests, NegDustPL) {
+    EXPECT_THROW({
+        try {
+            Defense* dust = new Dust();
+	    dust->setProtectionLevel(-6);
+        }
+        catch (std::invalid_argument& ia)
+        {
+            EXPECT_STREQ("-6", ia.what());
+            throw;
+        }
+    }, std::invalid_argument);
+}
 #endif //__DUST_TEST_HPP__ 
