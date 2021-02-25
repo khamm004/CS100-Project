@@ -6,25 +6,25 @@
 #include "shield.hpp"
 #include <stdexcept>
 
-TEST(ConstructorTest, ShieldDefaultConstructor) {
+TEST(ShieldTests, ShieldDefaultConstructor) {
     Defense* shield = new Shield();
     EXPECT_EQ(shield->getProtectionLevel(), 10);
 }
 
 // set ProtectionLevel
-TEST(ProtectionLevelTests, PosShieldPL) {
+TEST(ShieldTests, PosShieldPL) {
     Defense* shield = new Shield();
     shield->setProtectionLevel(21);
     EXPECT_EQ(shield->getProtectionLevel(), 21);
 }
 
-TEST(ProtectionLevelTests, ZeroShieldPL) {
+TEST(ShieldTests, ZeroShieldPL) {
     Defense* shield = new Shield();
     shield->setProtectionLevel(0);
     EXPECT_EQ(shield->getProtectionLevel(), 0);
 }
 
-TEST(ProtectionLevelTests, NegShieldPL) {
+TEST(ShieldTests, NegShieldPL) {
     EXPECT_THROW({
         try {
             Defense* shield = new Shield();
