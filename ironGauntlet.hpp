@@ -1,7 +1,7 @@
 #ifndef __IRONGAUNTLET_HPP__
 #define __IRONGAUNTLET_HPP__
 
-#include "Defense.hpp"
+#include "defense.hpp"
 
 class IronGauntlet: public Defense{
     public:

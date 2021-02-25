@@ -1,7 +1,7 @@
 #ifndef __DUST_HPP__
 #define __DUST_HPP__
 
-#include "Defense.hpp"
+#include "defense.hpp"
 
 class Dust: public Defense{
     public:

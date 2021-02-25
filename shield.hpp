@@ -1,7 +1,7 @@
 #ifndef __SHIELD_HPP__
 #define __SHIELD_HPP__
 
-#include "Defense.hpp"
+#include "defense.hpp"
 
 class Shield: public Defense{
     public:    

@@ -1,7 +1,7 @@
 #ifndef __MAGICRUBY_HPP__
 #define __MAGICRUBY_HPP__
 
-#include "Defense.hpp"
+#include "defense.hpp"
 
 class MagicRuby: public Defense{
     public:
