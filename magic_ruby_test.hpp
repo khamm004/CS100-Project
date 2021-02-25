@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 #include "defense.hpp"
-#include "magicRuby.hpp"
+#include "magic_ruby.hpp"
 
 TEST(MagicRubyTests, MagicRubyDefaultConstructor) {
     Defense* ruby = new MagicRuby();

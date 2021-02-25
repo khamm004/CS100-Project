@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 #include "defense.hpp"
-#include "ironGauntlet.hpp"
+#include "iron_gauntlet.hpp"
 
 TEST(IronGauntletTests, IronGauntletDefaultConstructor) {
     Defense* ig = new IronGauntlet();
