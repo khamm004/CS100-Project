@@ -1,13 +1,17 @@
+#ifndef __DUST_HPP__
+#define __DUST_HPP__
+
 #include "Defense.hpp"
 
-
 class Dust: public Defense{
-    
-    Dust(){
-        protectionLevel = 15;
-    }
+    public:
+    	Dust(): Defense(){
+        	protectionLevel = 15;
+    	}
    
-    void defend(){
-    	std::cout << "I will protect myself with my Magic Dust!" << std::endl;
-    }
+    	void defend(){
+    		std::cout << "I will protect myself with my Magic Dust!" << std::endl;
+    	}
 };
+
+#endif //__DUST_HPP__

@@ -5,14 +5,16 @@
 #include<iostream> 
 
 class Defense{
-    private:
+    protected:
 	int protectionLevel;
-    private:
-	void setProtecttionLevel(int lvl){
+    public:
+        Defense(){}
+
+	void setProtectionLevel(int lvl){
 		protectionLevel = lvl;
 	}
 	
-	void getProtectionLevel(){
+	int getProtectionLevel(){
 		return protectionLevel;
 	}
 
