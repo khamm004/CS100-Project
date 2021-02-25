@@ -1,5 +1,5 @@
-#ifndef __MAGICRUBY_HPP__
-#define __MAGICRUBY_HPP__
+#ifndef __MAGIC_RUBY_HPP__
+#define __MAGIC_RUBY_HPP__
 
 #include "defense.hpp"
 
@@ -14,4 +14,4 @@ class MagicRuby: public Defense{
     	}
 };
 
-#endif //__MAGICRUBY_HPP__
+#endif //__MAGIC_RUBY_HPP__

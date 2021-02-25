@@ -1,5 +1,5 @@
-#ifndef __IRONGAUNTLET_HPP__
-#define __IRONGAUNTLET_HPP__
+#ifndef __IRON_GAUNTLET_HPP__
+#define __IRON_GAUNTLET_HPP__
 
 #include "defense.hpp"
 
@@ -14,4 +14,4 @@ class IronGauntlet: public Defense{
     	}
 };
 
-#endif //__IRONGAUNTLET_HPP__
+#endif //__IRON_GAUNTLET_HPP__
