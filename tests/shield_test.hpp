@@ -9,6 +9,7 @@
 TEST(ShieldTests, ShieldDefaultConstructor) {
     Defense* shield = new Shield();
     EXPECT_EQ(shield->getProtectionLevel(), 10);
+    delete shield;
 }
 
 // set ProtectionLevel
@@ -16,22 +17,25 @@ TEST(ShieldTests, PosShieldPL) {
     Defense* shield = new Shield();
     shield->setProtectionLevel(21);
     EXPECT_EQ(shield->getProtectionLevel(), 21);
+    delete shield;
 }
 
 TEST(ShieldTests, ZeroShieldPL) {
     Defense* shield = new Shield();
     shield->setProtectionLevel(0);
     EXPECT_EQ(shield->getProtectionLevel(), 0);
+    delete shield;
 }
 
 TEST(ShieldTests, NegShieldPL) {
     EXPECT_THROW({
+	Defense* shield = new Shield();
         try {
-            Defense* shield = new Shield();
 	    shield->setProtectionLevel(-5);
         }
         catch (std::invalid_argument& ia)
         {
+	    delete shield;
             EXPECT_STREQ("-5", ia.what());
             throw;
         }

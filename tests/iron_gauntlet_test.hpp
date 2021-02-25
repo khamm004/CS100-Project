@@ -8,6 +8,7 @@
 TEST(IronGauntletTests, IronGauntletDefaultConstructor) {
     Defense* ig = new IronGauntlet();
     EXPECT_EQ(ig->getProtectionLevel(), 10);
+    delete ig;
 }
 
 // set ProtectionLevel
@@ -15,22 +16,25 @@ TEST(IronGauntletTests, PosIronGauntletPL) {
     Defense* ig = new IronGauntlet();
     ig->setProtectionLevel(23);
     EXPECT_EQ(ig->getProtectionLevel(), 23);
+    delete ig;
 }
 
 TEST(IronGauntletTests, ZeroIronGauntletPL) {
     Defense* ig= new IronGauntlet();
     ig->setProtectionLevel(0);
     EXPECT_EQ(ig->getProtectionLevel(), 0);
+    delete ig;
 }
 
 TEST(IronGauntletTests, NegIronGauntletPL) {
     EXPECT_THROW({
+	Defense* ig = new IronGauntlet();
         try {
-            Defense* ig = new IronGauntlet();
 	    ig->setProtectionLevel(-4);
         }
         catch (std::invalid_argument& ia)
         {
+	    delete ig;
             EXPECT_STREQ("-4", ia.what());
             throw;
         }
