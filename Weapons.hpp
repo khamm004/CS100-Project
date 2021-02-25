@@ -5,9 +5,11 @@
 #include <cstring>
 
 class Weapons {
-	private:
+	protected:
 		int damage;
 	public:
+		Weapons(){}
+
 		void setDamage(int dam){
 			damage = dam;
 		}
