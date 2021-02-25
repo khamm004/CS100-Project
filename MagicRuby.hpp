@@ -1,13 +1,17 @@
+#ifndef __MAGICRUBY_HPP__
+#define __MAGICRUBY_HPP__
+
 #include "Defense.hpp"
 
-
-class MagucRuby: public Defense{
+class MagicRuby: public Defense{
+    public:
+   	 MagicRuby(): Defense(){
+  		protectionLevel = 15;
+   	 }
     
-    MagicRuby(){
-  	protectionLevel = 15;
-    }
-
-    void defend(){
-        std::cout << "I will protect myself with my Magic Ruby!" << std::endl;
-    }
+    	void defend(){
+        	std::cout << "I will protect myself with my Magic Ruby!" << std::endl;
+    	}
 };
+
+#endif //__MAGICRUBY_HPP__
