@@ -1,5 +1,6 @@
 #include "Defense.hpp"
 
+
 class Dust: public Defense{
     
     Dust(){
