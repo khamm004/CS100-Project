@@ -9,10 +9,10 @@ public:
     virtual std::string attack(){
         srand(time(NULL));
         if(rand()%2){
-            std::cout << "You have successfully stabbed the enemy \n they are significantly wounded \n"
+            return /*std::cout <<*/ "You have successfully stabbed the enemy \n they are significantly wounded \n";
         }
         else{
-            std::cout << "Your attempt to stab the enemy was not successful \n the enemy remains strong \n"
+            return /*std::cout <<*/ "Your attempt to stab the enemy was not successful \n the enemy remains strong \n";
         }
     }
 };

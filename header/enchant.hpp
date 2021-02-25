@@ -9,10 +9,10 @@ public:
     virtual std::string attack(){
 	srand(time(NULL));
 	if(rand()%2){
-	    std::cout << "You have successfully enchanted the enemy \n they will be blinded for 5 seconds \n"
+	    return /*std::cout <<*/ "You have successfully enchanted the enemy \n they will be blinded for 5 seconds \n";
 	}
 	else{
-	    std::cout << "The enchantment was not successful \n the enemy remains strong \n"
+	    return /*std::cout <<*/ "The enchantment was not successful \n the enemy remains strong \n";
 	} 
     }
 };

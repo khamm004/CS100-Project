@@ -1,7 +1,7 @@
 #ifndef __ATTACK_HPP__
 #define __ATTACK_HPP__
 
-#include <cstring>
+#include <string>
 
 class Attack
 {

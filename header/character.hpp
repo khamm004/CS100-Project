@@ -1,12 +1,17 @@
 #ifndef __CHARACTER_HPP__
 #define __CHARACTER_HPP__
 
+#include <cstring>
+
 class Character
 {
 private:
 	Attack* attack;
 
 public:
+	Attack* GetAttack(){
+		return this->attack;
+	}
 	void SetAttack(Attack* atk){
 		attack = atk;
 	}
