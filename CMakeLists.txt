@@ -8,7 +8,7 @@ ADD_SUBDIRECTORY(googletest)
 
 #ADD_EXECUTABLE(spreadsheet main.cpp spreadsheet.cpp)
 ADD_EXECUTABLE(test 
-	tests/test.cpp 
+	tests/unit_test.cpp 
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
