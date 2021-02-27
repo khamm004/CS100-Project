@@ -1,18 +1,21 @@
 #ifndef __SWING_HPP__
 #define __SWING_HPP__
+#include "attack.hpp"
 #include <iostream>
 #include <cstring>
 
 class Swing: public Attack
 {
 public:
-    virtual std::string attack(){
+    virtual std::string attack() const{
         srand(time(NULL));
         if(rand()%2){
-            return /*std::cout <<*/ "The enemy has successfully swung his axe and hit you \n You have been significantly wounded \n";
+            	std::string temp = "The enemy has successfully swung his axe and hit you \n You have been significantly wounded \n";
+		return temp;
         }
         else{
-            return /*std::cout <<*/ "The enamy swung at you but was not successful \n you remain strong \n";
+		std::string temp = "The enamy swung at you but was not successful \n you remain strong \n";
+                return temp;
         }
     }
 };

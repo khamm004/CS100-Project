@@ -9,6 +9,9 @@ private:
 	Attack* attack;
 
 public:
+	~Character(){
+		delete attack;
+	}
 	Attack* GetAttack(){
 		return this->attack;
 	}

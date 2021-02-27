@@ -1,19 +1,22 @@
 #ifndef __SHOOT_HPP__
 #define __SHOOT_HPP__
+#include "attack.hpp"
 #include <iostream>
-#include <cstring>
+#include <string>
 
 class Shoot: public Attack
 {
 public:
-    std::string attack(){
+    std::string attack() const{
         srand(time(NULL));
         if(rand()%2){
-            return /*std::cout <<*/ "You have successfully shot the enemy \n they have been significantly weakened \n";
+                std::string temp = "You have successfully shot the enemy \n they have been significantly weakened \n"; 
+		return temp;
         }
         else{
-            return /*std::cout <<*/ "The shot was not successful \n the enemy remains strong \n";
-        }
+            	std::string temp = "The shot was not successful \n the enemy remains strong \n"; 
+		return temp;
+        }	
     }
 };
 
