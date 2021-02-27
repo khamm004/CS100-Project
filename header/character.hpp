@@ -6,7 +6,10 @@
 class Character
 {
 private:
+	Weapon* weapon;
+	Defense* defense;
 	Attack* attack;
+	int health;
 
 public:
 	~Character(){
