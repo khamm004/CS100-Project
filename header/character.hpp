@@ -3,35 +3,40 @@
 
 #include <cstring>
 
-class Character
-{
-private:
-	Weapon* weapon;
-	Defense* defense;
-	Attack* attack;
-	int health;
+class Character{
+    private:
+        Weapon* weapon;
+        Defense* defense;
+        Attack* attack;
+        int health;
 
-public:
-	~Character(){
-		delete attack;
+    public:
+        Character(){}
+
+        ~Character(){
+	    delete attack;
 	}
 
-	Attack* GetAttack(){
-		return this->attack;
-	}
+        Attack* GetAttack(){
+            return this->attack;
+        }
 
-	void SetAttack(Attack* atk){
-		attack = atk;
-	}
+        void SetAttack(Attack* atk){
+            attack = atk;
+        }
+
+	void sethealth(int h){
+            health = h;
+
+            if (h < 0) { 
+                    std::invalid_argument ia = std::invalid_argument(std::to_string(h));
+                    throw ia;
+                }
+        }
 	
-	void setHealth(int h){
-		health = h;
-	}	
-
-	int getHealth(){
-		return health;
-	}
-
+        int getHealth(){
+            return health;
+        }
 };
 
 #endif //__CHARACTER_HPP__
