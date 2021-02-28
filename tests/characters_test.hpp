@@ -146,6 +146,7 @@ TEST(TrollTests, ZeroTrollHealth) {
     delete troll;
 }
 
+
 TEST(TrollTests, NegTrollHealth) {
     Character* troll = new Troll();
 
