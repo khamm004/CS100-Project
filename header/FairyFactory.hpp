@@ -10,11 +10,23 @@ class FairyFactory : public CharacterFactory {
 		Weapon* w;
 		Defense* d;
 	public:
+		~FairyFactory(){
+			delete w;
+			delete d;
+		}
+
 		Character* createCharacter() {
 			d = createDefense();
 			w = createWeapon();
 			Character* charac = new Fairy(d,w);
 			return charac;
+		}
+		Weapon* getWeapon(){
+			return w;
+		}
+
+		Defense* getDefense(){
+			return d;
 		}
 };
 

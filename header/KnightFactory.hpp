@@ -10,11 +10,22 @@ class KnightFactory : public CharacterFactory {
         	Weapon* w;
                 Defense* d;
         public:
+		~KnightFactory() {
+			delete w;
+			delete d;
+		}
                 Character* createCharacter() {
                         d = createDefense();
                         w = createWeapon();
                         Character* charac = new Knight(d,w);
                         return charac;
+                }
+		Weapon* getWeapon(){
+                        return w;
+                }
+
+                Defense* getDefense(){
+                        return d;
                 }
 };
 
