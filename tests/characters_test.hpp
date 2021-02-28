@@ -5,23 +5,23 @@
 #include "../header/character.hpp"
 #include "../header/attack.hpp"
 #include "../header/knight.hpp"
-#include "../headerfairy.hpp"
+#include "../header/fairy.hpp"
 #include "../header/elf.hpp"
 #include "../header/troll.hpp"
 #include <stdexcept>
 
-// ---------------- Shield tests --------------//
+// ---------------- Kinght tests --------------//
 TEST(KnightTests, KnightDefaultConstructor) {
     Character* knight = new Knight();
-    EXPECT_EQ(knight->getHealth(), 50);
+    EXPECT_EQ(knight->getHealth(), 100);
     delete knight;
 }
 
 // set ProtectionLevel
 TEST(KnightTests, PosKnightHealth) {
     Character* knight = new Knight();
-    knight->setHealth(100);
-    EXPECT_EQ(knight->getHealth(), 100);
+    knight->setHealth(50);
+    EXPECT_EQ(knight->getHealth(), 50);
     delete knight;
 }
 
@@ -51,7 +51,7 @@ TEST(KnightTests, NegKnightHealth) {
 // ---------------- Fairy tests --------------//
 TEST(FairyTests, FairyDefaultConstructor) {
     Character* fairy = new Fairy();
-    EXPECT_EQ(fairy->getHealth(), 50);
+    EXPECT_EQ(fairy->getHealth(), 100);
     delete fairy;
 }
 
@@ -89,7 +89,7 @@ TEST(FairyTests, NegFairyHealth) {
 // ---------------- Elf tests --------------//
 TEST(ElfTests, ElfDefaultConstructor) {
     Character* elf = new Elf();
-    EXPECT_EQ(elf->getHealth(), 50);
+    EXPECT_EQ(elf->getHealth(), 100);
     delete elf;
 }
 
@@ -127,7 +127,7 @@ TEST(ElfTests, NegElfHealth) {
 // ---------------- Troll tests --------------//
 TEST(TrollTests, TrollDefaultConstructor) {
     Character* troll = new Troll();
-    EXPECT_EQ(troll->getHealth(), 50);
+    EXPECT_EQ(troll->getHealth(), 100);
     delete troll;
 }
 
@@ -162,4 +162,4 @@ TEST(TrollTests, NegTrollHealth) {
     delete troll;
 }
 
-#define __CHARACTER_TESTS_HPP__
+#endif //__CHARACTER_TESTS_HPP__
