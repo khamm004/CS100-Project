@@ -1,6 +1,10 @@
 #ifndef __CHARACTER_HPP__
 #define __CHARACTER_HPP__
 
+#include "weapon.hpp"
+#include "defense.hpp"
+#include "attack.hpp"
+
 #include <cstring>
 
 class Character{
