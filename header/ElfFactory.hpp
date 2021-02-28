@@ -1,14 +1,18 @@
 #ifndef __ELFFACTORY_HPP__
 #define __ELFFACTORY_HPP__
 
+#include "CharacterFactory.hpp"
+
 class ElfFactory : public CharacterFactory {
         private:
-                Weapon* createWeapon();
-                Defense* createDefense();
-        public:
+               //Weapon* createWeapon();
+               //Defense* createDefense();
+        	Weapon* w;
+		Defense* d;
+	public:
                 Character* createCharacter() {
-                        Defense* d = createDefense();
-                        Weapon* w = createWeapon();
+                        d = createDefense();
+                        w = createWeapon();
                         Character* charac = new Elf(d,w);
                         return charac;
                 }
