@@ -2,11 +2,13 @@
 #define __TROLL_HPP__
 
 #include "character.hpp"
+#include "Axe.hpp"
+#include "iron_gauntlet.hpp"
 
 class Troll: public Character{
     public:
     	Troll(): Character(){
-            Weapon* weapon = new Axe();
+            Weapons* weapon = new Axe();
             Defense* defense = new IronGauntlet();
     	}
 

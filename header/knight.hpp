@@ -2,15 +2,17 @@
 #define __KNIGHT_HPP__
 
 #include "character.hpp"
+#include "Sword.hpp"
+#include "shield.hpp"
 
 class Knight: public Character{
     public:
-    	Kinght(): Character(){
-            Weapon* weapon = new Sword();
+    	Knight(): Character(){
+            Weapons* weapon = new Sword();
             Defense* defense = new Shield();
     	}
 
-        ~Kinght(){
+        ~Knight(){
             delete weapon;
             delete defense;
         }

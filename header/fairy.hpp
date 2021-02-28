@@ -2,11 +2,13 @@
 #define __FAIRY_HPP__
 
 #include "character.hpp"
+#include "Wand.hpp"
+#include "dust.hpp"
 
 class Fairy: public Character{
     public:
     	Fairy(): Character(){
-            Weapon* weapon = new Wand();
+            Weapons* weapon = new Wand();
             Defense* defense = new Dust();
     	}
 

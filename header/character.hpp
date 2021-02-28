@@ -1,21 +1,27 @@
 #ifndef __CHARACTER_HPP__
 #define __CHARACTER_HPP__
 
-#include "weapon.hpp"
+#include "Weapons.hpp"
 #include "defense.hpp"
 #include "attack.hpp"
 
 #include <cstring>
 
 class Character{
-    private:
-        Weapon* weapon;
+    protected:
+        Weapons* weapon;
         Defense* defense;
         Attack* attack;
         int health;
 
     public:
         Character(){
+	    health = 100;
+	}
+
+	Character(Weapons* w, Defense* d){
+	    weapon = w;
+	    defense = d;
 	    health = 100;
 	}
 
@@ -31,7 +37,7 @@ class Character{
             attack = atk;
         }
 
-	void sethealth(int h){
+	void setHealth(int h){
             health = h;
 
             if (h < 0) { 

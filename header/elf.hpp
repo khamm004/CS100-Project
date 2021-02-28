@@ -2,11 +2,13 @@
 #define __ELF_HPP__
 
 #include "character.hpp"
+#include "BowAndArrow.hpp"
+#include "magic_ruby.hpp"
 
 class Elf: public Character{
     public:
     	Elf(): Character(){
-            Weapon* weapon = new BowAndArrow();
+            Weapons* weapon = new BowAndArrow();
             Defense* defense = new MagicRuby();
     	}
 
