@@ -15,7 +15,9 @@ class Character{
         int health;
 
     public:
-        Character(){}
+        Character(){
+	    health = 100;
+	}
 
         ~Character(){
 	    delete attack;
