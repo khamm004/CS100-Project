@@ -16,6 +16,9 @@ class Character{
 
     public:
         Character(){
+	    weapon = nullptr;
+	    defense = nullptr;
+	    attack = nullptr;
 	    health = 100;
 	}
 
