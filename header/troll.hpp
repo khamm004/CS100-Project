@@ -8,15 +8,12 @@
 class Troll: public Character{
     public:
     	Troll(): Character(){
-            Weapons* weapon = new Axe();
-            Defense* defense = new IronGauntlet();
+            weapon = new Axe();
+            defense = new IronGauntlet();
+	    attack = nullptr;
     	}
-
-        ~Troll(){
-            delete weapon;
-            delete defense;
-        }
-
+	
+	~Troll(){}
 };
 
 #endif //__TROLL_HPP__

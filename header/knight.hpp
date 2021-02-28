@@ -8,15 +8,12 @@
 class Knight: public Character{
     public:
     	Knight(): Character(){
-            Weapons* weapon = new Sword();
-            Defense* defense = new Shield();
+            weapon = new Sword();
+            defense = new Shield();
+	    attack = nullptr;
     	}
 
-        ~Knight(){
-            delete weapon;
-            delete defense;
-        }
-
+	~Knight(){}
 };
 
 #endif //__KNIGHT_HPP__

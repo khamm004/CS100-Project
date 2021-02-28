@@ -26,7 +26,12 @@ class Character{
 	}
 
         ~Character(){
-	    delete attack;
+	    if (weapon != nullptr)
+	    	delete weapon;
+	    if (defense != nullptr)
+		delete defense;
+	    if (attack != nullptr)
+	    	delete attack;
 	}
 
         Attack* GetAttack(){

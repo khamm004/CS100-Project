@@ -8,15 +8,12 @@
 class Fairy: public Character{
     public:
     	Fairy(): Character(){
-            Weapons* weapon = new Wand();
-            Defense* defense = new Dust();
+            weapon = new Wand();
+            defense = new Dust();
+	    attack = nullptr;
     	}
 
-        ~Fairy(){
-            delete weapon;
-            delete defense;
-        }
-
+	~Fairy(){}
 };
 
 #endif //__FAIRY_HPP__

@@ -8,15 +8,12 @@
 class Elf: public Character{
     public:
     	Elf(): Character(){
-            Weapons* weapon = new BowAndArrow();
-            Defense* defense = new MagicRuby();
+            weapon = new BowAndArrow();
+            defense = new MagicRuby();
+	    attack = nullptr;
     	}
 
-        ~Elf(){
-            delete weapon;
-            delete defense;
-        }
-
+	~Elf(){}
 };
 
 #endif //__ELFF_HPP__
