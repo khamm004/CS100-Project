@@ -6,7 +6,12 @@ class TrollFactory : public CharacterFactory {
                 Weapon* createWeapon();
                 Defense* createDefense();
         public:
-                Character* createCharacter();
+                Character* createCharacter() {
+                        Defense* d = createDefense();
+                        Weapon* w = createWeapon();
+                        Character* charac = new Troll(d,w);
+                        return charac;
+                }
 };
 
 #endif

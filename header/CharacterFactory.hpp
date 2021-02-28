@@ -7,7 +7,7 @@ class CharacterFactory {
 		Defense* createDefense();	
 
 	public:
-		Character* createCharacter();
+		virtual Character* createCharacter() = 0;
 };
 
 #endif
