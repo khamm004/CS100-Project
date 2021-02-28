@@ -8,7 +8,6 @@ class Troll: public Character{
     	Troll(): Character(){
             Weapon* weapon = new Axe();
             Defense* defense = new IronGauntlet();
-        	health = 50;
     	}
 
         ~Troll(){

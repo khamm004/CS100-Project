@@ -8,7 +8,6 @@ class Fairy: public Character{
     	Fairy(): Character(){
             Weapon* weapon = new Wand();
             Defense* defense = new Dust();
-        	health = 50;
     	}
 
         ~Fairy(){

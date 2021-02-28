@@ -8,7 +8,6 @@ class Elf: public Character{
     	Elf(): Character(){
             Weapon* weapon = new BowAndArrow();
             Defense* defense = new MagicRuby();
-        	health = 50;
     	}
 
         ~Elf(){

@@ -8,7 +8,6 @@ class Knight: public Character{
     	Kinght(): Character(){
             Weapon* weapon = new Sword();
             Defense* defense = new Shield();
-        	health = 50;
     	}
 
         ~Kinght(){
