@@ -22,6 +22,10 @@
 #include "../header/ElfFactory.hpp"
 
 #include "../header/character.hpp"
+#include "../header/knight.hpp"
+#include "../header/fairy.hpp"
+#include "../header/elf.hpp"
+#include "../header/troll.hpp"
 
 TEST(FairyTest, CorrectWeapon){
 	CharacterFactory* fairyTest = new FairyFactory();
