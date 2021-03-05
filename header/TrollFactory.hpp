@@ -2,12 +2,14 @@
 #define __TROLLFACTORY_HPP__
 
 #include "CharacterFactory.hpp"
+#include "troll.hpp"
+#include "character.hpp"
 
 class TrollFactory : public CharacterFactory {
         private:
                 //Weapon* createWeapon();
                 //Defense* createDefense();
-        	Weapon* w;
+        	Weapons* w;
 		Defense* d;
 	public:
 		~TrollFactory(){
@@ -16,13 +18,13 @@ class TrollFactory : public CharacterFactory {
                 }
 
                 Character* createCharacter() {
-                        Defense* d = createDefense();
-                        Weapon* w = createWeapon();
-                        Character* charac = new Troll(d,w);
+                        d = createDefense();
+                        w = createWeapon();
+                        Character* charac = new Troll(w,d);
                         return charac;
                 }
 		
-		Weapon* getWeapon(){
+		Weapons* getWeapon(){
                         return w;
                 }
 

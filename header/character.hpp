@@ -22,12 +22,6 @@ class Character{
 	    health = 100;
 	}
 
-	Character(Weapons* w, Defense* d){
-	    weapon = w;
-	    defense = d;
-	    health = 100;
-	}
-
         ~Character(){
 	    if (weapon != nullptr)
 	    	delete weapon;
@@ -57,6 +51,14 @@ class Character{
         int getHealth(){
             return health;
         }
+
+	Weapons* getWeapon(){
+		return weapon;
+	}
+
+	Defense* getDefense(){
+		return defense;
+	}
 };
 
 #endif //__CHARACTER_HPP__

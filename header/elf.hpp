@@ -13,6 +13,12 @@ class Elf: public Character{
 	    attack = nullptr;
     	}
 
+	Elf(Weapons* w, Defense* d) : Character() {
+		weapon = new BowAndArrow();
+            	defense = new MagicRuby();
+            	attack = nullptr;
+	}
+
 	~Elf(){}
 };
 

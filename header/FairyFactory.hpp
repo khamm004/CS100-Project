@@ -2,12 +2,14 @@
 #define __FAIRYFACTORY_HPP__
 
 #include "CharacterFactory.hpp"
+#include "fairy.hpp"
+#include "character.hpp"
 
 class FairyFactory : public CharacterFactory {
 	private:
 		//Weapon* createWeapon();
 		//Defense* createDefense();
-		Weapon* w;
+		Weapons* w;
 		Defense* d;
 	public:
 		~FairyFactory(){
@@ -18,10 +20,10 @@ class FairyFactory : public CharacterFactory {
 		Character* createCharacter() {
 			d = createDefense();
 			w = createWeapon();
-			Character* charac = new Fairy(d,w);
+			Character* charac = new Fairy(w,d);
 			return charac;
 		}
-		Weapon* getWeapon(){
+		Weapons* getWeapon(){
 			return w;
 		}
 

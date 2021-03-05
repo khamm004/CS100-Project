@@ -13,6 +13,12 @@ class Troll: public Character{
 	    attack = nullptr;
     	}
 	
+	Troll(Weapons* w, Defense* d){
+		weapon = new Axe();
+            	defense = new IronGauntlet();
+            	attack = nullptr;
+	}
+
 	~Troll(){}
 };
 

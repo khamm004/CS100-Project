@@ -13,6 +13,12 @@ class Knight: public Character{
 	    attack = nullptr;
     	}
 
+	Knight(Weapons* w, Defense* d) : Character() {
+		weapon = new Sword();
+		defense = new Shield();
+		attack = nullptr;
+	}
+
 	~Knight(){}
 };
 

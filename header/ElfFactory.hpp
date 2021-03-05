@@ -2,15 +2,17 @@
 #define __ELFFACTORY_HPP__
 
 #include "CharacterFactory.hpp"
+#include "elf.hpp"
+#include "character.hpp"
 
 class ElfFactory : public CharacterFactory {
         private:
                //Weapon* createWeapon();
                //Defense* createDefense();
-        	       Weapon* w;
-		             Defense* d;
+        	       Weapons* w;
+		       Defense* d;
 	      public:
-		            ~ElfFactory(){
+		~ElfFactory(){
                         delete w;
                         delete d;
                 }
@@ -18,10 +20,10 @@ class ElfFactory : public CharacterFactory {
                 Character* createCharacter() {
                         d = createDefense();
                         w = createWeapon();
-                        Character* charac = new Elf(d,w);
+                        Character* charac = new Elf(w,d);
                         return charac;
                 }
-		            Weapon* getWeapon(){
+		Weapons* getWeapon(){
                         return w;
                 }
 
