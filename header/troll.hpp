@@ -14,8 +14,8 @@ class Troll: public Character{
     	}
 	
 	Troll(Weapons* w, Defense* d){
-		weapon = new Axe();
-            	defense = new IronGauntlet();
+		weapon = w;
+            	defense = d;
             	attack = nullptr;
 	}
 

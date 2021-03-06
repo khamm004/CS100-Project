@@ -7,11 +7,19 @@
 
 class ElfFactory : public CharacterFactory {
         private:
-               //Weapon* createWeapon();
-               //Defense* createDefense();
-        	       Weapons* w;
-		       Defense* d;
-	      public:
+               //Weapons* w;
+               //Defense* d;
+        	Weapons* w;
+		Defense* d;
+	protected:
+		Weapons* createWeapon(){
+			return new BowAndArrow();
+		}
+		
+		Defense* createDefense(){
+			return new MagicRuby();
+		}
+	public:
 		~ElfFactory(){
                         delete w;
                         delete d;
@@ -23,6 +31,7 @@ class ElfFactory : public CharacterFactory {
                         Character* charac = new Elf(w,d);
                         return charac;
                 }
+		
 		Weapons* getWeapon(){
                         return w;
                 }

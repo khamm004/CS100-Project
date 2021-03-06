@@ -14,8 +14,8 @@ class Knight: public Character{
     	}
 
 	Knight(Weapons* w, Defense* d) : Character() {
-		weapon = new Sword();
-		defense = new Shield();
+		weapon = w;
+		defense = d;
 		attack = nullptr;
 	}
 

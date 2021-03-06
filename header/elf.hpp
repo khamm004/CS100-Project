@@ -14,8 +14,8 @@ class Elf: public Character{
     	}
 
 	Elf(Weapons* w, Defense* d) : Character() {
-		weapon = new BowAndArrow();
-            	defense = new MagicRuby();
+		weapon = w;
+            	defense = d;
             	attack = nullptr;
 	}
 

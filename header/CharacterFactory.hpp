@@ -3,8 +3,8 @@
 
 class CharacterFactory {
 	protected:
-		Weapons* createWeapon();
-		Defense* createDefense();	
+		virtual Weapons* createWeapon() = 0;
+		virtual Defense* createDefense() = 0;	
 
 	public:
 		virtual Character* createCharacter() = 0;

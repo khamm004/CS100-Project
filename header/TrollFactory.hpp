@@ -7,10 +7,17 @@
 
 class TrollFactory : public CharacterFactory {
         private:
-                //Weapon* createWeapon();
-                //Defense* createDefense();
+                //Weapons* w = createWeapon();
+                //Defense* d = createDefense();
         	Weapons* w;
 		Defense* d;
+	protected:
+		Weapons* createWeapon(){
+			return new Axe();
+		}
+		Defense* createDefense(){
+			return new IronGauntlet();
+		}
 	public:
 		~TrollFactory(){
                         delete w;

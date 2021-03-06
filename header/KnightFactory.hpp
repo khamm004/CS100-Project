@@ -7,10 +7,18 @@
 
 class KnightFactory : public CharacterFactory {
         private:
-        	//Weapon* createWeapon();
-        	//Defense* createDefense();
+        	//Weapons* w = createWeapon();
+        	//Defense* d = createDefense();
         	Weapons* w;
                 Defense* d;
+	protected:
+		Weapons* createWeapon(){
+			return new Sword();
+		}
+
+		Defense* createDefense(){
+			return new Shield();
+		}
         public:
 		~KnightFactory() {
 			delete w;

@@ -7,10 +7,18 @@
 
 class FairyFactory : public CharacterFactory {
 	private:
-		//Weapon* createWeapon();
-		//Defense* createDefense();
+		//Weapons* w = createWeapon();
+		//Defense* d = createDefense();
 		Weapons* w;
 		Defense* d;
+	protected:
+		Weapons* createWeapon() {
+			return new Wand();
+		}
+
+		Defense* createDefense() {
+			return new Dust();
+		}
 	public:
 		~FairyFactory(){
 			delete w;

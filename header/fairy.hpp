@@ -13,8 +13,8 @@ class Fairy: public Character{
 	    attack = nullptr;
     	}
 	Fairy(Weapons* w, Defense* d) : Character() {
-		weapon = new Wand();
-		defense = new Dust();
+		weapon = w;
+		defense = d;
 		attack = nullptr;
 	}
 	
