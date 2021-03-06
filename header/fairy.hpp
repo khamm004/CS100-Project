@@ -12,7 +12,12 @@ class Fairy: public Character{
             defense = new Dust();
 	    attack = nullptr;
     	}
-
+	Fairy(Weapons* w, Defense* d) : Character() {
+		weapon = w;
+		defense = d;
+		attack = nullptr;
+	}
+	
 	~Fairy(){}
 };
 
