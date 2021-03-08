@@ -1,5 +1,7 @@
-#include <iostream>
+#ifndef __MENU_HPP__
+#define __MENU_HPP__
 
+#include <iostream>
 using namespace std;
 
 void MainMenu() {
@@ -48,3 +50,5 @@ void instructions(){
 	cout << "Please enter if you would like to:" << endl;
 	cout << "Go back to the menu (type menu) or start the game (type start):" << endl;
 }
+
+#endif //__MENU_HPP__
