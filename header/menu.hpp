@@ -4,6 +4,28 @@
 #include <iostream>
 using namespace std;
 
+void menu() {
+	cout << "Welcome to Savior." << endl;
+	cout << "These are the following commands used in various situations" << endl;
+	cout << "\t Display the menu of commands (type menu)" << endl;
+	cout << "\t Display the game instructions (type instructions)" << endl;
+	cout << "\t Begin your journey! (type start)" << endl;
+	cout << "\t Quit the game. (type quit)" << endl;
+}
+
+void instructions(){
+	cout << "Instructions on how to play Savior." << endl;
+	cout << "\tWhen you enter the game, you will be asked to select a character." << endl;
+	cout << "\tYou can choose to be a Fairy, a Knight, or an Elf." << endl;
+	cout << "\t\t 1. Fairy is a character that uses a Wand as a weapon and Dust as a defense." << endl;
+	cout << "\t\t 2. Knight is a character that uses a Sword as a weapon and Shield as a defense." << endl;
+	cout << "\t\t 3. Elf is a character that uses a Bow and Arrow as a weapon and Magic Ruby as a defense." << endl;
+	cout << "\t After you choose your character, you will be asked a series of questions that could lead you to different scenarios. For example, you will be asked a riddle in which you are given multiple choices. Your role is to choose the correct option given to continue playing the game. You are given two attempts in giving the correct answer or else you will lose the game. Once you complete all the riddles, you have won the game." << endl;
+
+	cout << "Please enter if you would like to:" << endl;
+	cout << "Go back to the menu (type menu) or start the game (type start):" << endl;
+}
+
 void MainMenu() {
 	string choice;
 	bool quit = false;
@@ -26,29 +48,6 @@ void MainMenu() {
         	}
         cin >> choice;
 	}
-}
-
-
-void menu() {
-	cout << "Welcome to Savior." << endl;
-	cout << "These are the following commands used in various situations" << endl;
-	cout << "\t Display the menu of commands (type menu)" << endl;
-	cout << "\t Display the game instructions (type instructions)" << endl;
-	cout << "\t Begin your journey! (type start)" << endl;
-	cout << "\t Quit the game. (type quit)" << endl;
-}
-
-void instructions(){
-	cout << "Instructions on how to play Savior." << endl;
-	cout << "\tWhen you enter the game, you will be asked to select a character." << endl;
-	cout << "\tYou can choose to be a Fairy, a Knight, or an Elf." << endl;
-	cout << "\t\t 1. Fairy is a character that uses a Wand as a weapon and Dust as a defense." << endl;
-	cout << "\t\t 2. Knight is a character that uses a Sword as a weapon and Shield as a defense." << endl;
-	cout << "\t\t 3. Elf is a character that uses a Bow and Arrow as a weapon and Magic Ruby as a defense." << endl;
-	cout << "\t After you choose your character, you will be asked a series of questions that could lead you to different scenarios. For example, you will be asked a riddle in which you are given multiple choices. Your role is to choose the correct option given to continue playing the game. You are given two attempts in giving the correct answer or else you will lose the game. Once you complete all the riddles, you have won the game." << endl;
-
-	cout << "Please enter if you would like to:" << endl;
-	cout << "Go back to the menu (type menu) or start the game (type start):" << endl;
 }
 
 #endif //__MENU_HPP__
