@@ -2,6 +2,8 @@
 #include "../header/gameNode.h"
 #include "../header/userOption.h"
 
+#include "../header/character.hpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -18,12 +20,13 @@ GameTree::~GameTree(){
 }
 
 int GameTree::performDialogue(){
+	srand(time(NULL));
 	if(gameNodes.empty()) {
 		return -1;
 	}
 	
 	GameNode *currentNode = gameNodes[0];
-
+	Character* user;
 
 	while(true) {
 		cout << currentNode->text_out << endl;
@@ -48,15 +51,16 @@ int GameTree::performDialogue(){
 				cout << "Youve won!! You are a true survivor!" << endl;
 				return -1;
 			}else if (currentNode->userOptions[input].returnCode == 2){
-				cout << "subtract 15 from health" << endl;
+				int subtract = rand()%15+1;
+				user->setHealth(user->getHealth() - subtract);
+				cout << "subtract " << subtract << " from health" << endl;
 			}else if (currentNode->userOptions[input].returnCode == 1){
+				//if(TROLLFUNCTION == true) --> continue else cout << GAMEOVER return -1;
 				cout << "fight troll" << endl;
 			}else if(currentNode->userOptions[input].returnCode == 5){
 				cout << "fighting troll for the last time" << endl;
 				return -1;
-			}/*else if(currentNode->userOptions[input].returnCode == 6){
-				cout << "answering riddle for the last time" << endl;
-			}	*/
+			}
 			currentNode = currentNode->userOptions[input].nextNode;
 		}
 		cout << endl;
