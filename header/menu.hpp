@@ -2,11 +2,11 @@
 #define __MENU_HPP__
 
 #include <iostream>
-#include "CharacterFactory.hpp"
-#include "FairyFactory.hpp"
-#include "KnightFactory.hpp"
-#include "TrollFactory.hpp"
-#include "ElfFactory.hpp"
+//#include "CharacterFactory.hpp"
+//#include "FairyFactory.hpp"
+//#include "KnightFactory.hpp"
+//#include "TrollFactory.hpp"
+//#include "ElfFactory.hpp"
 
 #include "character.hpp"
 #include "knight.hpp"
@@ -67,3 +67,5 @@ void MainMenu() {
         cin >> choice;
 	}
 }
+
+#endif //__MENU_HPP__
