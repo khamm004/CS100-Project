@@ -50,4 +50,31 @@ void MainMenu() {
 	}
 }
 
+void displayCharacters(){
+        cout << "Choose a character" << endl;
+        cout << "1 : Fairy" <<endl;
+        cout << "2: Elf" << endl;
+        cout << "3: Knight" << endl;
+}
+
+int getChoice(){
+        int choice;
+        cin >> choice;
+        while (choice < 0 || choice > 3){
+                cin >> choice;
+        }
+        return choice;
+}
+
+Character * selectCharacter(int choice){
+        if (choice == 1){
+                return new Fairy();
+        }else if (choice == 2){
+                return new Elf();
+        }else if (choice == 3){
+                return new Knight();
+        }else{
+                return nullptr;
+        }
+}
 #endif //__MENU_HPP__
