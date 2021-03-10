@@ -1,5 +1,5 @@
-#ifndef __MENU_TESTS_HPP__
-#define __MENU_TESTS_HPP__
+#ifndef __MENU_TEST_HPP__
+#define __MENU_TEST_HPP__
 
 #include "gtest/gtest.h"
 #include "..header/menu.hpp"
@@ -41,4 +41,4 @@ TEST(SelectCharacter, Incorrect){
         EXPECT_EQ(character, nullptr);
         delete character;
 }
-#endif //__MENU_TESTS_HPP__
+#endif //__MENU_TEST_HPP__
