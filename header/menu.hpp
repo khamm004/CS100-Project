@@ -2,6 +2,17 @@
 #define __MENU_HPP__
 
 #include <iostream>
+#include "CharacterFactory.hpp"
+#include "FairyFactory.hpp"
+#include "KnightFactory.hpp"
+#include "TrollFactory.hpp"
+#include "ElfFactory.hpp"
+
+#include "character.hpp"
+#include "knight.hpp"
+#include "fairy.hpp"
+#include "elf.hpp"
+#include "troll.hpp"
 using namespace std;
 #include "character.hpp"
 #include "knight.hpp"
@@ -72,11 +83,17 @@ int getChoice(){
 
 Character * selectCharacter(int choice){
         if (choice == 1){
-                return new Fairy();
+		CharacterFactory* fairyTFact = new FairyFactory();
+		Character* fairy = fairyFact->createCharacter();
+                return fairy;
         }else if (choice == 2){
-                return new Elf();
+                CharacterFactory* elfTFact = new ElfFactory();
+		Character* elf = elfFact->createCharacter();
+                return elf;
         }else if (choice == 3){
-                return new Knight();
+                CharacterFactory* knightTFact = new KnightFactory();
+		Character* knight = knightFact->createCharacter();
+                return knight;
         }else{
                 return nullptr;
         }
