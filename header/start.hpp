@@ -22,7 +22,7 @@ class Character;
 
 void displayCharacters(){
         cout << "Choose a character" << endl;
-        cout << "1 : Fairy" <<endl;
+        cout << "1 :Fairy" <<endl;
         cout << "2: Elf" << endl;
         cout << "3: Knight" << endl;
 }
@@ -30,7 +30,7 @@ void displayCharacters(){
 int getChoice(){
         int choice;
         cin >> choice;
-        while (choice < 0 || choice > 3){
+        while (choice < 1 || choice > 3){
 		cout << "Select characters 1-3" << endl;
                 cin >> choice;
         }

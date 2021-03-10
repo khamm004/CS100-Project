@@ -47,10 +47,10 @@ void MainMenu() {
 			instructions();
 			cin >> choice;
 			while (correctCommand(choice) == false){
+				cout << "Go back to the menu (type menu) or start the game (type start):" << endl;
 				cin >> choice;
 			}
-		}else if(choice == "start" || choice == "Start"){	
-	        	//cout << "gameplay" << endl;
+		}else if(choice == "start" || choice == "Start"){
 			start();
 			break;
 		} else if(choice == "quit" || choice == "Quit"){
