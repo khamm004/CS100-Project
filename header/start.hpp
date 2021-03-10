@@ -1,6 +1,10 @@
 #ifndef __START_HPP__
 #define __START_HPP__
 
+#include <iostream>
+#include "Weapons.hpp"
+#include "defense.hpp"
+
 #include "CharacterFactory.hpp"
 #include "FairyFactory.hpp"
 #include "KnightFactory.hpp"
@@ -12,6 +16,7 @@
 #include "fairy.hpp"
 #include "elf.hpp"
 #include "troll.hpp"
+using namespace std;
 
 void displayCharacters(){
         cout << "Choose a character" << endl;
@@ -32,18 +37,17 @@ int getChoice(){
 
 Character * selectCharacter(int choice){
         if (choice == 1){
-		CharacterFactory* fairyTFact = new FairyFactory();
+		CharacterFactory* fairyFact = new FairyFactory();
 		Character* fairy = fairyFact->createCharacter();
 		cout << "You chose fairy!" << endl;
-                return fairy;
-		
+		return fairy;
         }else if (choice == 2){
-                CharacterFactory* elfTFact = new ElfFactory();
+                CharacterFactory* elfFact = new ElfFactory();
 		Character* elf = elfFact->createCharacter();
 		cout << "You chose elf!" << endl;
-                return elf;
+		return elf;
         }else if (choice == 3){
-                CharacterFactory* knightTFact = new KnightFactory();
+                CharacterFactory* knightFact = new KnightFactory();
 		Character* knight = knightFact->createCharacter();
 		cout << "You chose knight!" << endl;
                 return knight;
@@ -59,7 +63,7 @@ void start(){
 	  int choice = getChoice();
 	  userChar = selectCharacter(choice);
 	  if (userChar != nullptr){
-      cout << "created character << choice << " successsfully" << endl;
+             cout << "created character" << choice << " successsfully" << endl;
     }
 }
 #endif //__START_HPP__
