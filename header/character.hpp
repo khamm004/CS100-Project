@@ -20,7 +20,7 @@ class Character{
 	    defense = nullptr;
 	    attack = nullptr;
 	    health = 100;
-	}
+	  }
 
         ~Character(){
 	    if (weapon != nullptr)
@@ -29,7 +29,7 @@ class Character{
 		delete defense;
 	    if (attack != nullptr)
 	    	delete attack;
-	}
+	    }
 
         Attack* GetAttack(){
             return this->attack;
@@ -39,7 +39,7 @@ class Character{
             attack = atk;
         }
 
-	void setHealth(int h){
+	      void setHealth(int h){
             health = h;
 
             if (h < 0) { 
@@ -52,13 +52,13 @@ class Character{
             return health;
         }
 
-	Weapons* getWeapon(){
-		return weapon;
-	}
+        Weapons* getWeapon(){
+          return weapon;
+        }
 
-	Defense* getDefense(){
-		return defense;
-	}
+        Defense* getDefense(){
+          return defense;
+        }
 };
 
 #endif //__CHARACTER_HPP__
