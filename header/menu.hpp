@@ -37,6 +37,13 @@ void instructions(){
 	cout << "Go back to the menu (type menu) or start the game (type start):" << endl;
 }
 
+bool correctCommand(string choice){
+	if (choice == "menu" || choice == "Menu" || choice == "start" || choice == "Start"){
+		return true;
+	}
+	return false;
+}
+
 void MainMenu() {
 	string choice;
 	bool quit = false;
@@ -45,15 +52,13 @@ void MainMenu() {
 	while(quit == false){
 		if(choice == "menu" || choice == "Menu"){
 			menu();
+			cin >> choice;
 		}else if(choice == "instructions" || choice == "Instructions"){
 			instructions();
-			cout << "Type menu to go back to menu" << endl;
 			cin >> choice;
-			while (choice != "menu" || choice != "Menu"){
-				cout << "Type menu to go back to menu" << endl;
+			while (correctCommand(choice) == false){
 				cin >> choice;
 			}
-			continue;
 		}else if(choice == "start" || choice == "Start"){	
 			//gameplay class or main
 	        	cout << "gameplay" << endl;
@@ -63,8 +68,9 @@ void MainMenu() {
             		break;
 		} else {
 			cout << "Couldn’t understand. Please choose one of the options:" << endl;
+			cin >> choice;
         	}
-        cin >> choice;
+		
 	}
 }
 

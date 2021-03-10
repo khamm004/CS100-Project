@@ -5,8 +5,9 @@
 //#include "../header/elf.hpp"
 //#include "../header/knight.hpp"
 
-void start(){
+int main(){
 	MainMenu();
+	return 0;
 }
 
 
