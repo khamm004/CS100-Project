@@ -17,8 +17,25 @@ void playGame(){
 
 	GameTree gameTree;
 	//gameTree = new GameTree();
-	gameTree.beachInit();
-
+	//gameTree.beachInit();
+	//gameTree.desertInit();
+	/*
+ *	cout << "Where are you headed?" << endl;
+ *	cout << "1: Sunset Beach" << endl;
+ *	cout << "2: Desert Oasis" << endl;
+ *	cout << "3: Mystical Forest" << endl;
+ *	cin >> location;
+ *	
+ *	if(location == 1){
+ *		gameTree.beachInit();
+ *	} else if(location == 2){
+ *		gameTree.desertInit();
+ *	} else {
+ *		gameTree.forestInit();
+ *	}
+ *
+ * 	*/
+	gameTree.forestInit();
 	int rv = gameTree.performDialogue(); 
 }
 

@@ -216,20 +216,79 @@ void GameTree::desertInit() {
 }
 
 
-/*
 void GameTree::forestInit() {
-	GameNode *node0 = new GameNode();
-	GameNode *node1 = new GameNode();
-	GameNode *node2 = new GameNode();
-	GameNode *node3 = new GameNode();
-	GameNode *node4 = new GameNode();
-	GameNode *node5 = new GameNode;
-	GameNode *node6 = new GameNode;
-	GameNode *node7 = new GameNode;
-	GameNode *node8 = new GameNode;
-	GameNode *node9 = new GameNode;
-	GameNode *node10 = new GameNode;
-	GameNode *node11 = new GameNode;
+	GameNode *node0 = new GameNode("You begin traveling down the path that leads to the Right. You encounter flying monkeys and broken bridge.\nI have lakes with no water, mountains with no stone and cities with no buildings. What am I?");
 
-	node0->UserOptions.push_back(UserOption("", ));
-}*/
+	GameNode *node1 = new GameNode("Flying monkeys like your answer and agree to fly you over the river to the other side. On the other side is a land\n so green and so lush, you see mountains as high as the sky, half coated in white. As you squint, you\n can make out some caves hidden to the right of the mountains.\n You must cross these caves to reach the Mystical Forest. You make your way to the caves\nYouve encountered a troll!! You can either:");
+
+	GameNode *node2 = new GameNode("Youve reached the peak of the mountain, but in order to continue to cross you must solve the following riddle. \nWhat tastes better than it smells?");
+
+	GameNode *node3 = new GameNode("Youve walked past the mountains and come to a standstill when you see the massive waterfall \nthat descends just a few feet in front of you. The water flows aggressively but you need to get to the bottom because that is the way to the Mystical Forest. You hear the sound of footsteps. \nYou turn around and see a troll running behind you. It must have spotted you near the caves! You can either: ");
+
+	GameNode *node4 = new GameNode("Youve walked past the mountains and come to a standstill when you see the massive waterfall that \ndescends just a few feet in front of you. The water flows aggressively but you need to get to the bottom because that is the way to the Mystical Forest. You hear the sound of footsteps.\n You turn around and see a troll running behind you. It must have spotted you near the caves! You can either: ");
+
+	GameNode *node5 = new GameNode("That was close! But you managed to defeat the troll! You are getting closer to the Mystical Forest, you can smell it.\n You must now enter a golden gate. But how? You do not have the key\n and it is too high for you to jump. A sorcerer appears as says to you \"I will open the gate for\n you if you can answer the following riddle..\"\n I have no doors, but I have keys. I have no rooms, but I have a space.\n You can enter, but you can never leave. What am I?");
+
+	GameNode *node6 = new GameNode("What is always in front of you but cant be seen?");
+
+	GameNode *node7 = new GameNode("OMG! Do your eyes deceive you? That looks like the Mystical Forest, but it looks so far away \nand you are exhausted. You notice a witch to your right and she says to you.\n \"I can take you to the Mystical Forest on my broom if you answer the following riddle correctly\"\nWhat are the next three letters in this combination? OTTFFSS");
+
+	GameNode *node8 = new GameNode("That was a close one! You really kicked that trolls butt! As you continue to\n walk, you begin to smell the mystic green leaves of the Mystical Forest. That means you are nearly there. However, the troll is not \nyet defeated, it is getting up and coming behind you! Quick put the troll out of its misery and you will get to go to the Mystical Forest.");
+	
+	GameNode *node9 = new GameNode("The golden gate is opened for you. You walk in and can see the Mystical Forest.\n However, the sorcerer did not close the gate and a troll is coming after you!");
+
+	GameNode *node10 = new GameNode("Swoosh! The water is pushing you to shore..you open your eyes and can see\n the mystical Forest ahead of you. However, youve managed to escape the trolls too many times.\n It looks like your luck has run out because there is a troll heading your way!");
+
+
+	node0->userOptions.push_back(UserOption("Grass", 4, nullptr));
+	node0->userOptions.push_back(UserOption("Forest", 4, nullptr));
+	node0->userOptions.push_back(UserOption("Ocean", 4, nullptr));
+	node0->userOptions.push_back(UserOption("Map", 0, node1));
+	gameNodes.push_back(node0);
+
+	node1->userOptions.push_back(UserOption("Combat with the troll", 1, node2));
+	node1->userOptions.push_back(UserOption("Take a longer route through the mountains, but be warned it will take a toll on your health by 5 points", 2, node3));
+	gameNodes.push_back(node1);
+
+	node2->userOptions.push_back(UserOption("jackfruit", 4, nullptr));
+	node2->userOptions.push_back(UserOption("egg", 4, nullptr));
+	node2->userOptions.push_back(UserOption("your tongue", 0, node4));
+	node2->userOptions.push_back(UserOption("fish", 4, nullptr));
+	gameNodes.push_back(node2);
+
+	node3->userOptions.push_back(UserOption("Combat with the troll", 1, node5));
+	node3->userOptions.push_back(UserOption("Jump down the waterfall and escape, but be warned the bottom is rocky and you will lose 10 points of health", 2, node6));
+	gameNodes.push_back(node3);
+
+	node4->userOptions.push_back(UserOption("Combat with the troll", 1, node7));
+	node4->userOptions.push_back(UserOption("Jump down the waterfall and escape, but be warned the bottom is rocky and you will lose 10 points of health", 2, node8));
+	gameNodes.push_back(node4);
+
+	node5->userOptions.push_back(UserOption("piano", 4, nullptr));
+	node5->userOptions.push_back(UserOption("keyboard", 4, nullptr));
+	node5->userOptions.push_back(UserOption("dictionary", 0, node9));
+	node5->userOptions.push_back(UserOption("entrance", 4, nullptr));
+	gameNodes.push_back(node5);
+
+	node6->userOptions.push_back(UserOption("forehead", 4, nullptr));
+	node6->userOptions.push_back(UserOption("goals", 4, nullptr));
+	node6->userOptions.push_back(UserOption("chin", 4, nullptr));
+	node6->userOptions.push_back(UserOption("future", 0, node10));
+	gameNodes.push_back(node6);
+
+	node7->userOptions.push_back(UserOption("WWP", 4, nullptr));
+	node7->userOptions.push_back(UserOption("OTT", 4, nullptr));
+	node7->userOptions.push_back(UserOption("ENT", 3, nullptr));
+	node7->userOptions.push_back(UserOption("OTF", 4, nullptr));
+	gameNodes.push_back(node7);
+
+	node8->userOptions.push_back(UserOption("It is time to fight!", 5, nullptr));
+	gameNodes.push_back(node8);
+
+	node9->userOptions.push_back(UserOption("You must defeat the troll!", 5, nullptr));
+	gameNodes.push_back(node9);
+
+	node10->userOptions.push_back(UserOption("Quick you must fight!", 5, nullptr));
+	gameNodes.push_back(node10);
+}
+
