@@ -18,6 +18,8 @@
 #include "troll.hpp"
 using namespace std;
 
+class Character;
+
 void displayCharacters(){
         cout << "Choose a character" << endl;
         cout << "1 : Fairy" <<endl;

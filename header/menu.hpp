@@ -50,9 +50,8 @@ void MainMenu() {
 				cin >> choice;
 			}
 		}else if(choice == "start" || choice == "Start"){	
-			//gameplay class or main
-	        	cout << "gameplay" << endl;
-			//start();
+	        	//cout << "gameplay" << endl;
+			start();
 			break;
 		} else if(choice == "quit" || choice == "Quit"){
 			quit = true;

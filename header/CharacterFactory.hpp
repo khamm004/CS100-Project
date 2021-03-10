@@ -1,5 +1,8 @@
 #ifndef __CHARACTERFACTORY_HPP__
 #define __CHARACTERFACTORY_HPP__
+#include "character.hpp"
+#include "Weapons.hpp"
+#include "defense.hpp"
 
 class CharacterFactory {
 	protected:
