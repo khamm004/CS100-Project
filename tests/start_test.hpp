@@ -44,4 +44,9 @@ TEST(SelectCharacter, Incorrect){
         Character* character = selectCharacter(5);
         EXPECT_EQ(character, nullptr);
 }
+
+TEST(SelectCharacter, Incorrect2){
+        Character* character = selectCharacter(0);
+        EXPECT_EQ(character, nullptr);
+}
 #endif //__START_TEST_HPP__
