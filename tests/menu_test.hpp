@@ -2,7 +2,7 @@
 #define __MENU_TESTS_HPP__
 
 #include "gtest/gtest.h"
-
+#include "..header/menu.hpp"
 #include "../header/CharacterFactory.hpp"
 #include "../header/FairyFactory.hpp"
 #include "../header/KnightFactory.hpp"

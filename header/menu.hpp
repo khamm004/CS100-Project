@@ -14,10 +14,6 @@
 #include "elf.hpp"
 #include "troll.hpp"
 using namespace std;
-#include "character.hpp"
-#include "knight.hpp"
-#include "elf.hpp"
-#include "fairy.hpp"
 
 void menu() {
 	cout << "Welcome to Savior." << endl;
