@@ -44,7 +44,7 @@
  > cmake3  .
  > make
  > ./main
- 
+ > 
  > or run
  > g++ -g -O0 -o main src/main.cpp sr/character.cpp
  > 
