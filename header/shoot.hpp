@@ -7,15 +7,21 @@
 class Shoot: public Attack
 {
 public:
-    std::string attack() const{
+    ~Shoot(){};
+    virtual int attack(Character* character) const{
         srand(time(NULL));
+	//srand(1);
         if(rand()%2){
-                std::string temp = "You have successfully shot the enemy \n they have been significantly weakened \n"; 
-		return temp;
+                std::cout << "You have successfully shot the enemy with your ";
+		character->getWeapon()->weapon();
+		std::cout << ", the enemy has been significantly weakened. \n"; 
+		return 1;
         }
         else{
-            	std::string temp = "The shot was not successful \n the enemy remains strong \n"; 
-		return temp;
+            	std::cout << "The shot with your ";
+		character->getWeapon()->weapon();
+		std::cout << " was not successful, the enemy remains strong. \n"; 
+		return 0;
         }	
     }
 };

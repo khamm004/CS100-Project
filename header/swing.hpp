@@ -7,15 +7,18 @@
 class Swing: public Attack
 {
 public:
-    virtual std::string attack() const{
+    virtual int attack(Character* character) const{
         srand(time(NULL));
         if(rand()%2){
-            	std::string temp = "The enemy has successfully swung his axe and hit you \n You have been significantly wounded \n";
-		return temp;
+            	std::cout << "The enemy has successfully swung his ";
+		character->getWeapon()->weapon();
+		std::cout << " and hit you. You have lost 10 health points.\n";
+		return 1;
         }
         else{
-		std::string temp = "The enamy swung at you but was not successful \n you remain strong \n";
-                return temp;
+		std::cout << "The enemy swung at you but missed,";
+		std::cout << " you remain strong \n";
+                return 0;
         }
     }
 };

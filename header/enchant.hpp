@@ -7,16 +7,22 @@
 class Enchant: public Attack
 {
 public:
-    std::string attack() const{
+    ~Enchant(){};
+    int attack(Character* character) const{
 	srand(time(NULL));
 	if(rand()%2){
-	        std::string temp = "You have successfully enchanted the enemy \n they will be blinded for 5 seconds \n";
-		return temp;
+	        std::cout<< "You have successfully enchanted the enemy with your ";
+		character->getWeapon()->weapon();
+		std::cout << ", they have suffered damage.\n";
+		return 1;
 	}
 	else{
-	        std::string temp = "The enchantment was not successful \n the enemy remains strong \n";
-		return temp;
+	        std::cout<< "The enchantment with your ";
+		character->getWeapon()->weapon();
+		std::cout << " was not successful. The enemy remains strong. \n";
+		return 0;
 	} 
+	//return -1;
     }
 };
 
