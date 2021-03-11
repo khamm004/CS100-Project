@@ -37,9 +37,11 @@
  
  ## Screenshots
  > Screenshots of the input/output after running your application
- > ![Screenshot](TestOutput1.jpg)
+ > ![Screenshot](Demo1.jpg)
  > 
- > ![Screenshot](TestOutput2.jpg)
+ > ![Screenshot](Demo2.jpg)
+ >  
+ > ![Screenshot](Demo3.jpg)
  ## Installation/Usage
  > clone repository
  > 
