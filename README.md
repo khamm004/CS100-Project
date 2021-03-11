@@ -58,5 +58,5 @@
  > In order to test our project, we used the Google Test Framework to unit test our code. For aspects that require user input, we tested it on the terminal. Screenshots are provided below.
  > 
  >![Screenshot](test1.png)
- >![Screenshot](test2.png)
+ >
  >![Screenshot](test3.png)
