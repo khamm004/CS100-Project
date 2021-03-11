@@ -49,10 +49,16 @@
  > g++ -g -O0 -o main src/main.cpp sr/character.cpp
  > 
  ## Testing
- > In order to test our project, we used the Google Test Framework to unit test our code. For aspects that require user input, we tested it on the terminal. Screenshots are provided below.
+ > In order to test our project, we used the Google Test Framework to unit test our code. 
+ > We tested the following: 
+ > Abstract Factory pattern (CharacterFactory)
+ > Strategy Pattern (Attack)
+ > Fight Sequence
+ > Menu
+ > selectCharacter 
+ > GameTree
+ > For aspects that require user input, we tested it on the terminal. Screenshots are provided below.
  > 
  >![Screenshot](test1.png)
  >
  >![Screenshot](test3.png)
- >![Screenshot](TestOutput1.jpg)
- >![Screenshot](TestOutput2.jpg)
