@@ -19,14 +19,14 @@ GameTree::~GameTree(){
 	gameNodes.clear();
 }
 
-int GameTree::performDialogue(){
+int GameTree::performDialogue(Character* user){
 	srand(time(NULL));
 	if(gameNodes.empty()) {
 		return -1;
 	}
 	
 	GameNode *currentNode = gameNodes[0];
-	Character* user;
+	//Character* user;
 
 	while(true) {
 		cout << currentNode->text_out << endl;
@@ -52,7 +52,8 @@ int GameTree::performDialogue(){
 				return -1;
 			}else if (currentNode->userOptions[input].returnCode == 2){
 				int subtract = rand()%15+1;
-				user->setHealth(user->getHealth() - subtract);
+				int health = user->getHealth();
+				//user->setHealth(user->getHealth() - subtract);
 				cout << "subtract " << subtract << " from health" << endl;
 			}else if (currentNode->userOptions[input].returnCode == 1){
 				//if(TROLLFUNCTION == true) --> continue else cout << GAMEOVER return -1;
@@ -65,6 +66,7 @@ int GameTree::performDialogue(){
 		}
 		cout << endl;
 	}
+	//delete user;
 }
 
 void GameTree::beachInit() {

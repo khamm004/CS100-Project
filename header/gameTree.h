@@ -2,6 +2,7 @@
 #define __GAMETREE_H__
 
 #include "../header/gameNode.h"
+#include "character.hpp"
 
 #include <vector>
 
@@ -17,7 +18,7 @@ class GameTree {
 		void desertInit();
 		void forestInit();
 
-		int performDialogue(); // conversation function	
+		int performDialogue(Character* user); // conversation function	
 };
 
 #endif
