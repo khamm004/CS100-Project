@@ -1,4 +1,4 @@
-# Savior
+# Survivor
 
   > Authors: [Bijal Mugatwala](https://github.com/bijalm), [Kathyrn Hammar](https://github.com/khamm004), [Estela Ramirez Ramirez](https://github.com/estela-ramirez)
 
