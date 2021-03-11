@@ -4,6 +4,7 @@
 #include "CharacterFactory.hpp"
 #include "elf.hpp"
 #include "character.hpp"
+#include "shoot.hpp"
 
 class ElfFactory : public CharacterFactory {
         private:
@@ -29,7 +30,8 @@ class ElfFactory : public CharacterFactory {
                         d = createDefense();
                         w = createWeapon();
                         Character* charac = new Elf(w,d);
-                        return charac;
+                        charac->SetAttack(new Shoot());
+			return charac;
                 }
 		
 		Weapons* getWeapon(){

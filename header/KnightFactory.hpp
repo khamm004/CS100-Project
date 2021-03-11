@@ -4,6 +4,10 @@
 #include "CharacterFactory.hpp"
 #include "knight.hpp"
 #include "character.hpp"
+#include "attack.hpp"
+#include "stab.hpp"
+
+class Attack;
 
 class KnightFactory : public CharacterFactory {
         private:
@@ -28,7 +32,8 @@ class KnightFactory : public CharacterFactory {
                         d = createDefense();
                         w = createWeapon();
                         Character* charac = new Knight(w,d);
-                        return charac;
+                        charac->SetAttack(new Stab());
+			return charac;
                 }
 		Weapons* getWeapon(){
                         return w;

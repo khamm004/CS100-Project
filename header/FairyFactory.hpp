@@ -5,6 +5,9 @@
 #include "fairy.hpp"
 #include "character.hpp"
 
+#include "attack.hpp"
+#include "enchant.hpp"
+
 class FairyFactory : public CharacterFactory {
 	private:
 		//Weapons* w = createWeapon();
@@ -29,6 +32,7 @@ class FairyFactory : public CharacterFactory {
 			d = createDefense();
 			w = createWeapon();
 			Character* charac = new Fairy(w,d);
+			charac->SetAttack(new Enchant());
 			return charac;
 		}
 		Weapons* getWeapon(){

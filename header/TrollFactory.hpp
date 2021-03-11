@@ -4,6 +4,7 @@
 #include "CharacterFactory.hpp"
 #include "troll.hpp"
 #include "character.hpp"
+#include "swing.hpp"
 
 class TrollFactory : public CharacterFactory {
         private:
@@ -28,6 +29,7 @@ class TrollFactory : public CharacterFactory {
                         d = createDefense();
                         w = createWeapon();
                         Character* charac = new Troll(w,d);
+			charac->SetAttack(new Swing());
                         return charac;
                 }
 		
