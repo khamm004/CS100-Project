@@ -44,12 +44,12 @@
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > 1. clone repository
+ > clone repository
  > 
- >  run the following commands
- > 2. cmake3  .
- > 3. make
- > 5. ./main
+ > run the following commands
+ > cmake3  .
+ > make
+ > ./main
  
  > or run
  > g++ -g -O0 -o main src/main.cpp sr/character.cpp
