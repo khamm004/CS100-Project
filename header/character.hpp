@@ -20,10 +20,10 @@ class Character{
         ~Character();
         Attack* GetAttack();
         void SetAttack(Attack* atk);
-	void setHealth(int h);
+	      void setHealth(int h);
         int getHealth();
-	Weapons* getWeapon();
-	Defense* getDefense();
+	      Weapons* getWeapon();
+	      Defense* getDefense();
 };
 
 #endif //__CHARACTER_HPP__

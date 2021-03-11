@@ -2,7 +2,7 @@
 #define __FACTORIES_TESTS_HPP__
 
 #include "gtest/gtest.h"
-
+/*
 #include "../header/Weapons.hpp"
 #include "../header/Wand.hpp"
 #include "../header/Sword.hpp"
@@ -14,7 +14,7 @@
 #include "../header/dust.hpp"
 #include "../header/iron_gauntlet.hpp"
 #include "../header/magic_ruby.hpp"
-
+*/
 #include "../header/CharacterFactory.hpp"
 #include "../header/FairyFactory.hpp"
 #include "../header/KnightFactory.hpp"
