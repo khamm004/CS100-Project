@@ -12,6 +12,14 @@
 #include <stdexcept>
 //Checking for type of input that could be assigned to variable damage.
 
+TEST(WeaponsTest, weapons){
+	Weapons* test = new Wand();
+	test->weapon();
+
+}
+
+
+
 TEST(DamageTest, ZeroInputDamage){
         Weapons* test = new Wand();
         test->setDamage(0);
