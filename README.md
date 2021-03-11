@@ -37,6 +37,9 @@
  
  ## Screenshots
  > Screenshots of the input/output after running your application
+ > ![Screenshot](TestOutput1.jpg)
+ > 
+ > ![Screenshot](TestOutput2.jpg
  ## Installation/Usage
  > clone repository
  > 
@@ -46,21 +49,21 @@
  > ./main
  
  > or run
- > g++ -g -O0 -o main src/main.cpp sr/character.cpp
+ > g++ -g -O0 -o main src/main.cpp src/character.cpp
  > 
  ## Testing
  > In order to test our project, we used the Google Test Framework to unit test our code. 
- 
-  We tested the following: 
-  Abstract Factory pattern (CharacterFactory)
-  Strategy Pattern (Attack)
-  Fight Sequence
-  Menu
-  selectCharacter 
-  GameTree
-  
+ > We tested the following: 
+ > Abstract Factory pattern (CharacterFactory)
+ > Strategy Pattern (Attack)
+ > Fight Sequence
+ > Menu
+ > selectCharacter 
+ > GameTree
  > For aspects that require user input, we tested it on the terminal. Screenshots are provided below.
  > 
  >![Screenshot](test1.png)
  >
  >![Screenshot](test3.png)
+ >
+ > For the integration testing of the GameTree: refer to the screenshots above.
