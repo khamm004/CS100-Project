@@ -86,7 +86,6 @@ void start(){
 	GameTree gameTree;
 	
 	cout << "You, a traveler, approach a nearby town and a local takes notice of you." << endl;
-	cout <<   
  	cout << "\"Hey there strager!\" the local says, \"Where are you headed?\"" << endl;
  	cout << "1: Sunset Beach" << endl;
  	cout << "2: Desert Oasis" << endl;
