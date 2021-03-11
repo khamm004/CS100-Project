@@ -1,3 +1,10 @@
+#include <iostream>
+#include "../header/menu.hpp"
+//#include "../header/character.hpp"
+////#include "../header/fairy.hpp"
+////#include "../header/elf.hpp"
+////#include "../header/knight.hpp"
+
 #include "../header/gameTree.h"
 #include "../header/gameNode.h"
 #include "../header/userOption.h"
@@ -8,6 +15,7 @@
 void playGame();
 
 int main(){
+	MainMenu();
 	playGame();
 	return 0;
 }
