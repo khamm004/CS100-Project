@@ -23,6 +23,8 @@ int fight_sequence(Character* character){
 		hitEnemy += character->GetAttack()->attack(character); //# of times user hits enemy
 		if(hitEnemy == 2){
                         std::cout << "The enemy has succumbed to his wounds, you are victorious\n";
+			delete trollFact;
+			delete troll;
 			return 1; //defeated the troll
                 }
 		temp = troll->GetAttack()->attack(troll);
@@ -33,6 +35,8 @@ int fight_sequence(Character* character){
 				character->setHealth(health);
 			}
 			else{ //character killed by enemy
+				delete trollFact;
+				delete troll;
 				return 0;
 			}
 		}
@@ -40,6 +44,7 @@ int fight_sequence(Character* character){
 		std::cin >> key;
 		std::cout << "\n";
 	}
+	
 
 }
 

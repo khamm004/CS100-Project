@@ -84,7 +84,7 @@ void start(){
 	int location = 0;
 
 	GameTree gameTree;
-
+	
  	cout << "Where are you headed?" << endl;
  	cout << "1: Sunset Beach" << endl;
  	cout << "2: Desert Oasis" << endl;
