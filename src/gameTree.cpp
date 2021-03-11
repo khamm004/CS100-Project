@@ -209,8 +209,8 @@ void GameTree::desertInit() {
 	node3->userOptions.push_back(UserOption("Throw a stick to distract the troll to escape, but be warned the troll can come back and hurt you and make you will lose 10 points of health", 2, node6));
 	gameNodes.push_back(node3);
 
-	node4->userOptions.push_back(UserOption("Combat with the troll", 1, node7));
-	node4->userOptions.push_back(UserOption("Jump over the volcanic rocks, lose 15 points of health", 2, node8));
+	node4->userOptions.push_back(UserOption("Combat with the troll", 1, node8));
+	node4->userOptions.push_back(UserOption("Jump over the volcanic rocks, lose 15 points of health", 2, node7));
 	gameNodes.push_back(node4);
 
 	node5->userOptions.push_back(UserOption("By sleeping at night", 0, node9));
