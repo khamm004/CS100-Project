@@ -44,7 +44,15 @@
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ > 1. clone repository
+ >  run the following commands
+ > 2. cmake3  .
+ > 3. make
+ > 5. /.main
+ 
+ > or run
+ > g++ -g -O0 -o main src/main.cpp sr/character.cpp
+ > 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  >![Screenshot](test1.png)
