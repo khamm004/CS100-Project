@@ -9,7 +9,7 @@ ADD_EXECUTABLE(test
 )
 
 ADD_EXECUTABLE(main
-	src/main.cpp
+	src/main.cpp src/character.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

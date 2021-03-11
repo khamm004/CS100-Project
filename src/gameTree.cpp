@@ -4,6 +4,14 @@
 
 #include "../header/character.hpp"
 
+#include "../header/fightsequence.hpp"
+#include "../header/attack.hpp"
+#include "../header/TrollFactory.hpp"
+#include "../header/CharacterFactory.hpp"
+#include "../header/ElfFactory.hpp"
+#include "../header/FairyFactory.hpp"
+#include "../header/KnightFactory.hpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -58,15 +66,27 @@ int GameTree::performDialogue(Character* user){
 			}else if (currentNode->userOptions[input].returnCode == 1){
 				//if(TROLLFUNCTION == true) --> continue else cout << GAMEOVER return -1;
 				cout << "fight troll" << endl;
+				if(fight_sequence(user) == 0){
+					cout << "Game Over!! We have outsmarted you!" << endl;
+					return -1;
+				} else {
+					cout << "You won against the troll!" << endl;
+				}
 			}else if(currentNode->userOptions[input].returnCode == 5){
 				cout << "fighting troll for the last time" << endl;
+                                if(fight_sequence(user) == 0){
+                                        cout << "Game Over!! We have outsmarted you!" << endl;
+                                } else {
+                                        cout << "You won against the troll!" << endl;
+					cout << "Youve won!! You are a true survivor!" << endl;
+                                }			
 				return -1;
 			}
 			currentNode = currentNode->userOptions[input].nextNode;
 		}
 		cout << endl;
 	}
-	//delete user;
+	delete user;
 }
 
 void GameTree::beachInit() {
