@@ -51,21 +51,25 @@ Character * selectCharacter(int choice){
 		CharacterFactory* fairyFact = new FairyFactory();
 		Character* fairy = fairyFact->createCharacter();
 		cout << "You chose fairy!" << endl;
+		delete fairyFact;
 		return fairy;
         }else if (choice == 2){
                 CharacterFactory* elfFact = new ElfFactory();
 		Character* elf = elfFact->createCharacter();
 		cout << "You chose elf!" << endl;
+		delete elfFact;
 		return elf;
         }else if (choice == 3){
                 CharacterFactory* knightFact = new KnightFactory();
 		Character* knight = knightFact->createCharacter();
 		cout << "You chose knight!" << endl;
-                return knight;
+                delete knightFact;
+		return knight;
         }else{
 		cout << "No character chosen." << endl;
                 return nullptr;
         }
+
 }
 
 void start(){
@@ -80,9 +84,6 @@ void start(){
 	int location = 0;
 
 	GameTree gameTree;
-	//gameTree = new GameTree();
-	//gameTree.beachInit();
-	//gameTree.desertInit();
 
  	cout << "Where are you headed?" << endl;
  	cout << "1: Sunset Beach" << endl;
@@ -96,10 +97,8 @@ void start(){
  		gameTree.desertInit();
  	} else {
  		gameTree.forestInit();
- 	}
+ 	} 	
 
-  	
-	//gameTree.forestInit();
 	int rv = gameTree.performDialogue(userChar); 
 	delete userChar;
 }		 	 	 	 					 	 		 	 		 	  			
