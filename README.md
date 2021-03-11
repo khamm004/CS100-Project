@@ -47,6 +47,6 @@
  > Instructions on installing and running your application
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- >![Screenshot](test1.jpg)
- >![Screenshot](test2.jpg)
- >![Screenshot](test3.jpg)
+ >![Screenshot](test1.png)
+ >![Screenshot](test2.png)
+ >![Screenshot](test3.png)
