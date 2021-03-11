@@ -5,7 +5,8 @@
 #include "defense.hpp"
 #include "attack.hpp"
 
-#include <cstring>
+//#include <cstring>
+class Attack;
 
 class Character{
     protected:
@@ -15,50 +16,14 @@ class Character{
         int health;
 
     public:
-        Character(){
-	    weapon = nullptr;
-	    defense = nullptr;
-	    attack = nullptr;
-	    health = 100;
-	  }
-
-        ~Character(){
-	    if (weapon != nullptr)
-	    	delete weapon;
-	    if (defense != nullptr)
-		delete defense;
-	    if (attack != nullptr)
-	    	delete attack;
-	    }
-
-        Attack* GetAttack(){
-            return this->attack;
-        }
-
-        void SetAttack(Attack* atk){
-            attack = atk;
-        }
-
-	      void setHealth(int h){
-            health = h;
-
-            if (h < 0) { 
-                    std::invalid_argument ia = std::invalid_argument(std::to_string(h));
-                    throw ia;
-                }
-        }
-	
-        int getHealth(){
-            return health;
-        }
-
-        Weapons* getWeapon(){
-          return weapon;
-        }
-
-        Defense* getDefense(){
-          return defense;
-        }
+        Character();
+        ~Character();
+        Attack* GetAttack();
+        void SetAttack(Attack* atk);
+	      void setHealth(int h);
+        int getHealth();
+	      Weapons* getWeapon();
+	      Defense* getDefense();
 };
 
 #endif //__CHARACTER_HPP__

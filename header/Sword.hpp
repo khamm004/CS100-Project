@@ -12,7 +12,7 @@ class Sword : public Weapons {
         	}
 
         	void weapon(){
-                	std::cout << "You, a knight, decided to use a sword as a weapon." << std::endl;
+                	std::cout << "sword";
         	}
 };
 
