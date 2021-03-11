@@ -1,9 +1,10 @@
 #include "gtest/gtest.h"
-#include "strategy_tests.hpp"
+//#include "strategy_tests.hpp"
 #include "weapons_test.hpp"
 #include "defense_test.hpp"
 #include "characters_test.hpp"
 #include "factories_test.hpp"
+//#include "fight_test.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
