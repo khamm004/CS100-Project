@@ -4,7 +4,7 @@
 
 ## Project Description
  > Savior is a text based Role-Playing Game. Users will be able to choose a character, make decisions and work through riddles in order to progress through the whole story. Different decisions will lead to different story outcomes. 
-> used https://www.youtube.com/watch?v=W4TV-_-Wcw4 for our gameTree. 
+> We used a similar structure to the one found in this video: https://www.youtube.com/watch?v=W4TV-_-Wcw4 for the implementation of our gameTree. 
 ### Inputs/Outputs
  > It will be implemented in C++. We are interested in creating Savior because it allows room for creativity and the end product will be unique and fun to share with others. The input would be different choices that the user would want to make. The output would be text responses and indicators to represent the varied paths of the story and the possible actions of the character based on the decision of the user.
  >
