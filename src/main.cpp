@@ -4,22 +4,22 @@
 ////#include "../header/fairy.hpp"
 ////#include "../header/elf.hpp"
 ////#include "../header/knight.hpp"
-
+/*
 #include "../header/gameTree.h"
 #include "../header/gameNode.h"
 #include "../header/userOption.h"
 #include "gameTree.cpp"
 #include "gameNode.cpp"
 #include "userOption.cpp"
-
-void playGame();
+*/
+//void playGame();
 
 int main(){
 	MainMenu();
-	playGame();
+	//playGame();
 	return 0;
 }
-
+/*
 void playGame(){
 	int location = 0;
 
@@ -46,5 +46,5 @@ void playGame(){
 	//gameTree.forestInit();
 	int rv = gameTree.performDialogue(user); 
 }
-
+*/
 

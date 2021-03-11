@@ -16,9 +16,18 @@
 #include "fairy.hpp"
 #include "elf.hpp"
 #include "troll.hpp"
+
+#include "gameTree.h"
+#include "gameNode.h"
+#include "userOption.h"
+#include "../src/gameTree.cpp"
+#include "../src/gameNode.cpp"
+#include "../src/userOption.cpp"
+
 using namespace std;
 
 class Character;
+//class GameTree;
 
 void displayCharacters(){
         cout << "Choose a character" << endl;
@@ -60,12 +69,38 @@ Character * selectCharacter(int choice){
 }
 
 void start(){
-    Character * userChar = nullptr;
+ 	  Character * userChar = nullptr;
 	  displayCharacters();
 	  int choice = getChoice();
 	  userChar = selectCharacter(choice);
 	  if (userChar != nullptr){
              cout << "created character" << choice << " successsfully" << endl;
-    }
-}
+   	  }
+		
+	int location = 0;
+
+	GameTree gameTree;
+	//gameTree = new GameTree();
+	//gameTree.beachInit();
+	//gameTree.desertInit();
+
+ 	cout << "Where are you headed?" << endl;
+ 	cout << "1: Sunset Beach" << endl;
+ 	cout << "2: Desert Oasis" << endl;
+ 	cout << "3: Mystical Forest" << endl;
+	cin >> location;
+
+	if(location == 1){
+		gameTree.beachInit();
+ 	} else if(location == 2){
+ 		gameTree.desertInit();
+ 	} else {
+ 		gameTree.forestInit();
+ 	}
+
+  	
+	//gameTree.forestInit();
+	int rv = gameTree.performDialogue(userChar); 
+	delete userChar;
+}		 	 	 	 					 	 		 	 		 	  			
 #endif //__START_HPP__

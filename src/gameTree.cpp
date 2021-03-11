@@ -52,8 +52,8 @@ int GameTree::performDialogue(Character* user){
 				return -1;
 			}else if (currentNode->userOptions[input].returnCode == 2){
 				int subtract = rand()%15+1;
-				int health = user->getHealth();
-				//user->setHealth(user->getHealth() - subtract);
+				//int health = user->getHealth();
+				user->setHealth(user->getHealth() - subtract);
 				cout << "subtract " << subtract << " from health" << endl;
 			}else if (currentNode->userOptions[input].returnCode == 1){
 				//if(TROLLFUNCTION == true) --> continue else cout << GAMEOVER return -1;
