@@ -6,7 +6,7 @@
 using namespace std;
 
 void menu() {
-	cout << "Welcome to Savior." << endl;
+	cout << "Welcome to Survivor." << endl;
 	cout << "These are the following commands used in various situations" << endl;
 	cout << "\t Display the menu of commands (type menu)" << endl;
 	cout << "\t Display the game instructions (type instructions)" << endl;
@@ -15,7 +15,7 @@ void menu() {
 }
 
 void instructions(){
-	cout << "Instructions on how to play Savior." << endl;
+	cout << "Instructions on how to play Survivor." << endl;
 	cout << "\tWhen you enter the game, you will be asked to select a character." << endl;
 	cout << "\tYou can choose to be a Fairy, a Knight, or an Elf." << endl;
 	cout << "\t\t 1. Fairy is a character that uses a Wand as a weapon and Dust as a defense." << endl;
