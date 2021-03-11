@@ -44,8 +44,11 @@
  > clone repository
  > 
  > run the following commands
+ 
  > cmake3  .
+ 
  > make
+ 
  > ./main
  > 
  > or run
