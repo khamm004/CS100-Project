@@ -27,7 +27,7 @@
 
 ## Class Diagram
   ### Abstract Factory Pattern Diagram 
-  >![Screenshot](OMT Diagrams-Abstract Factory Pattern.jpg)
+  >![Screenshot](OMT-AbstractFactory.jpg)
   > ## Character Factory OMT Description:
   > In our game, the different characters are distinguishable by their weapon and defense. For example, the Knight has a designated knight weapon (sword) and defense (shield). When the user wants to select a new character, if they select a Knight, the knight object will be used as the user’s character. If instead, the user decides to select the Fairy character, that will take the place of the user character.
   ### Strategy Pattern Diagram
