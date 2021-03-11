@@ -78,24 +78,29 @@ void start(){
 	  int choice = getChoice();
 	  userChar = selectCharacter(choice);
 	  if (userChar != nullptr){
-             cout << "created character" << choice << " successsfully" << endl;
+             //cout << "created character" << choice << " successsfully" << endl;
    	  }
 		
 	int location = 0;
 
 	GameTree gameTree;
 	
- 	cout << "Where are you headed?" << endl;
+	cout << "You, a traveler, approach a nearby town and a local takes notice of you." << endl;
+	cout <<   
+ 	cout << "\"Hey there strager!\" the local says, \"Where are you headed?\"" << endl;
  	cout << "1: Sunset Beach" << endl;
  	cout << "2: Desert Oasis" << endl;
  	cout << "3: Mystical Forest" << endl;
 	cin >> location;
 
 	if(location == 1){
+		cout << "\"I see\", says the local, \"you can get there the quickest by going down the road to the Left, good luck!\"" << endl;
 		gameTree.beachInit();
  	} else if(location == 2){
+		cout << "\"I see\", says the local, \"you can get there the quickest by continuing straight down this road, good luck!\"" << endl;
  		gameTree.desertInit();
  	} else {
+		cout << "\"I see\", says the local, \"you can get there the quickest by going down the road to the Right, good luck!\"" << endl;
  		gameTree.forestInit();
  	} 	
 
