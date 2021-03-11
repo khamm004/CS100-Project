@@ -45,16 +45,18 @@
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > 1. clone repository
+ > 
  >  run the following commands
  > 2. cmake3  .
  > 3. make
- > 5. /.main
+ > 5. ./main
  
  > or run
  > g++ -g -O0 -o main src/main.cpp sr/character.cpp
  > 
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > In order to test our project, we used the Google Test Framework to unit test our code. For aspects that require user input, we tested it on the terminal. Screenshots are provided below.
+ > 
  >![Screenshot](test1.png)
  >![Screenshot](test2.png)
  >![Screenshot](test3.png)
